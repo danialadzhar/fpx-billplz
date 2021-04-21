@@ -1,0 +1,51 @@
+{
+    "name": "jomweb/billplz-laravel",
+    "description": "Laravel adapter for Billplz",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mior Muhammad Zaki",
+            "email": "crynobone@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Billplz\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Billplz\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "illuminate/support": "^8.18.1",
+        "jomweb/billplz": "^4.3.1",
+        "php-http/guzzle7-adapter": "^0.1"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^5.3",
+        "orchestra/canvas": "^6.1",
+        "orchestra/testbench": "^6.15"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Billplz\\Laravel\\BillplzServiceProvider"
+            ],
+            "aliases": {
+                "Billplz": "Billplz\\Laravel\\Billplz"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
